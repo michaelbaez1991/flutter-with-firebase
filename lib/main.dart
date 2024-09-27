@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       getPages: AppPages.routes,
       // initialRoute: Routes.lOADING,
-      // initialRoute: Routes.LOGIN,
-      initialRoute: Routes.REGISTER,
+      initialRoute: Routes.LOGIN,
+      // initialRoute: Routes.REGISTER,
     );
   }
 }
