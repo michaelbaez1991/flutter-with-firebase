@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_with_firebase/auth/structure/controllers/auth_controller.dart';
 import 'package:flutter_with_firebase/auth/utils/validators_utils.dart';
-import 'package:flutter_with_firebase_owp/auth/structure/controllers/auth_controller.dart';
 
 import 'package:get/get.dart';
 
