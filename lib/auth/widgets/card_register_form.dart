@@ -26,22 +26,22 @@ class CardRegisterForm extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(
-                height: 20,
-              ),
-              //POSIBLE ERROR
-              //Es necesario utilizar los widget de Flutter como hijos del Form
-              //Form => TextFormField , TextFormField ... etc => Validate
-              //para hacer las validaciones => TextFormField
-              Flexible(
-                child: TextFormField(
-                  obscureText: false,
-                  controller: authController.nameController,
-                  validator: formValidator.isValidName,
-                  decoration:
-                      const InputDecoration(hintText: "Escribe tu nombre"),
-                ),
-              ),
+              // const SizedBox(
+              //   height: 20,
+              // ),
+              // //POSIBLE ERROR
+              // //Es necesario utilizar los widget de Flutter como hijos del Form
+              // //Form => TextFormField , TextFormField ... etc => Validate
+              // //para hacer las validaciones => TextFormField
+              // Flexible(
+              //   child: TextFormField(
+              //     obscureText: false,
+              //     controller: authController.nameController,
+              //     validator: formValidator.isValidName,
+              //     decoration:
+              //         const InputDecoration(hintText: "Escribe tu nombre"),
+              //   ),
+              // ),
               const SizedBox(
                 height: 20,
               ),

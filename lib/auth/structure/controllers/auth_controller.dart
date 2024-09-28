@@ -6,12 +6,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthController extends GetxController {
   // TextEditingController nameController = TextEditingController();
-  // TextEditingController emailController = TextEditingController();
-  // TextEditingController passwordController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   // TextEditingController repeatPasswordController = TextEditingController();
 
-  // Rxn<User?> firebaseUser = Rxn<User?>();
-  // final FirebaseAuth _auth = FirebaseAuth.instance;
+  Rxn<User?> firebaseUser = Rxn<User?>();
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   // Stream<User?> get user => _auth.authStateChanges();
   // @override
   // void onReady() {
@@ -33,26 +33,24 @@ class AuthController extends GetxController {
   //   firebaseUser.value = await AuthFirebaseRepository().signInAnonymous();
   // }
 
-  // registerWithEmailAndPassword() async {
-  //   firebaseUser.value =
-  //       await AuthFirebaseRepository().registerWithEmailAndPassword(
-  //     email: emailController.value.text,
-  //     password: passwordController.value.text,
-  //   );
+  registerWithEmailAndPassword() async {
+    firebaseUser.value = await AuthFirebaseRepository().registerWithEmailAndPassword(
+      email: emailController.value.text,
+      password: passwordController.value.text,
+    );
 
-  //   // FirestoreDatabaseUsers().createNewUser(
-  //   //   uidUser: firebaseUser.value!.uid,
-  //   //   nameUser: emailController.value.text,
-  //   // );
-  // }
+    // FirestoreDatabaseUsers().createNewUser(
+    //   uidUser: firebaseUser.value!.uid,
+    //   nameUser: emailController.value.text,
+    // );
+  }
 
-  // loginWithEmailAndPassword() async {
-  //   firebaseUser.value =
-  //       await AuthFirebaseRepository().loginWithEmailAndPassword(
-  //     email: emailController.value.text,
-  //     password: passwordController.value.text,
-  //   );
-  // }
+  loginWithEmailAndPassword() async {
+    firebaseUser.value = await AuthFirebaseRepository().loginWithEmailAndPassword(
+      email: emailController.value.text,
+      password: passwordController.value.text,
+    );
+  }
 
   // Future<void> signOut() async {
   //   return _auth.signOut();
