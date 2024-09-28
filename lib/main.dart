@@ -25,8 +25,9 @@ class MyApp extends StatelessWidget {
 
       getPages: AppPages.routes,
       // initialRoute: Routes.lOADING,
-      initialRoute: Routes.LOGIN,
+      // initialRoute: Routes.LOGIN,
       // initialRoute: Routes.REGISTER,
+      initialRoute: Routes.HOME,
       initialBinding: BindingsBuilder(() {
         Get.put<AuthController>(AuthController());
       }),

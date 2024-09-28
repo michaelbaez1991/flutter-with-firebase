@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_with_firebase/auth/structure/controllers/auth_controller.dart';
+import 'package:flutter_with_firebase/auth/structure/controllers/auth_controller.dart';
 import 'package:flutter_with_firebase/auth/widgets/card_login_form.dart';
 import 'package:flutter_with_firebase/routes/app_routes.dart';
 import 'package:get/get.dart';
@@ -9,11 +9,16 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // AuthController authController = Get.find();
+    AuthController authController = Get.find();
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          authController.signInAnonymous();
+        },
+      ),
       // floatingActionButton: FloatingActionButton(
       //   onPressed: () {
-      //     authController.signInAnonymous();
+      //     authController.loginWithGoogle();
       //   },
       // ),
       backgroundColor: Colors.orange,
