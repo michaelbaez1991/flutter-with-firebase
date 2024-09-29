@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_with_firebase_owp/auth/structure/controllers/auth_controller.dart';
+// import 'package:flutter_with_firebase/auth/structure/controllers/auth_controller.dart';
+// import 'package:flutter_with_firebase/movies/structure/controllers/movies_controller.dart';
+import 'package:flutter_with_firebase/movies/widgets/section_film_widget.dart';
 // import 'package:flutter_with_firebase_owp/movies/services/movies_firebase_repository.dart';
-// import 'package:flutter_with_firebase_owp/movies/structure/controllers/movies_controller.dart';
-
-// import 'package:flutter_with_firebase_owp/movies/widgets/section_film_widget.dart';
 // import 'package:get/get.dart';
 
 class MoviesHome extends StatelessWidget {
@@ -17,21 +16,17 @@ class MoviesHome extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
-              heroTag: "1",
-              child: const Icon(Icons.close),
-              onPressed: () {
-                // authController.signOut();
-              }),
+            heroTag: "1",
+            child: const Icon(Icons.close),
+            onPressed: () {},
+          ),
           const SizedBox(
             width: 20,
           ),
           FloatingActionButton(
             heroTag: "2",
             child: const Icon(Icons.read_more),
-            onPressed: () {
-              // MoviesController moviesController = Get.put(MoviesController());
-              // moviesController.getMoviesFromFirebase();
-            },
+            onPressed: () {},
           )
         ],
       ),
@@ -39,20 +34,20 @@ class MoviesHome extends StatelessWidget {
         title: const Center(
           child: Text(
             "Mis Películas",
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.black),
           ),
         ),
       ),
       backgroundColor: const Color.fromRGBO(91, 161, 210, 1),
-      // body: Column(
-      //   mainAxisAlignment: MainAxisAlignment.end,
-      //   children: const [
-      //     Flexible(
-      //       flex: 2,
-      //       child: SectionFilmsWidget(),
-      //     ),
-      //   ],
-      // ),
+      body: const Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Flexible(
+            flex: 2,
+            child: SectionFilmsWidget(),
+          ),
+        ],
+      ),
     );
   }
 }
