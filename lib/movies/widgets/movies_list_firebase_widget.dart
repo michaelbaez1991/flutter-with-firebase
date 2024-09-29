@@ -13,15 +13,15 @@ class MoviesListFirebaseWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<MoviesController>(builder: (controller) {
-      return MoviesListWidget(titleSection: titleSection, movies: []);
-
+      // return MoviesListWidget(titleSection: titleSection, movies: []);
+      
       //Esta lista es la lista peliculas populares ordenadas de mayor a menor valoración
-      // controller.getMoviesFromFirebase();
-      // return Obx(() => MoviesListWidget(
-      //       // ignore: invalid_use_of_protected_member
-      //       movies: controller.firebaseMovies.value,
-      //       titleSection: titleSection,
-      //     ));
+      controller.getMoviesFromFirebase();
+      return Obx(() => MoviesListWidget(
+            // ignore: invalid_use_of_protected_member
+            movies: controller.firebaseMovies.value,
+            titleSection: titleSection,
+          ));
     });
   }
 }
