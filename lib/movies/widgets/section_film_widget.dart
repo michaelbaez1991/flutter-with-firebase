@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_with_firebase/movies/widgets/movies_list_firebase_widget.dart';
 import 'package:flutter_with_firebase/movies/widgets/movies_list_popular_widget.dart';
-// import 'package:flutter_with_firebase/movies/widgets/movies_list_firebase_widget.dart';
 import 'package:flutter_with_firebase/themes/colors_them.dart';
 
 class SectionFilmsWidget extends StatelessWidget {
@@ -30,9 +30,9 @@ class SectionFilmsWidget extends StatelessWidget {
                 titleSection: "RECOMENDADO PARA TI",
               ),
               //Esta es la lista de películas ordenadas en función de la popularidad
-              // MoviesListFirebaseWidget(
-              //   titleSection: "PELÍCULAS DESDE FIREBASE",
-              // ),
+              MoviesListFirebaseWidget(
+                titleSection: "PELÍCULAS DESDE FIREBASE",
+              ),
               SizedBox(
                 height: 100,
               )

@@ -1,4 +1,5 @@
 import 'package:flutter_with_firebase/movies/models/movie_model.dart';
+import 'package:flutter_with_firebase/movies/services/movies_firebase_repository.dart';
 import 'package:flutter_with_firebase/themes/colors_them.dart';
 // import 'package:flutter_with_firebase_owp/movies/services/movies_firebase_repository.dart';
 import 'package:get/get.dart';
@@ -18,7 +19,10 @@ class DetailsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.darkBackground,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          final Map<String, dynamic> data = movie!.toJson();
+          MoviesFirebaseRepository().setMoviesFirebase(data: data);
+        },
         child: const Icon(
           Icons.add,
           size: 40,
